@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gTV-IL-0wX" customClass="LibraryCell" customModule="PrinterApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq1-ho-a84">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rDT-dx-xEO">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rDT-dx-xEO" firstAttribute="leading" secondItem="Aq1-ho-a84" secondAttribute="leading" id="3Tv-BK-La2"/>
+                            <constraint firstAttribute="trailing" secondItem="rDT-dx-xEO" secondAttribute="trailing" id="Ue5-XI-eLK"/>
+                            <constraint firstItem="rDT-dx-xEO" firstAttribute="top" secondItem="Aq1-ho-a84" secondAttribute="top" id="kuh-aH-lh4"/>
+                            <constraint firstAttribute="bottom" secondItem="rDT-dx-xEO" secondAttribute="bottom" id="wCA-dK-ax9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Aq1-ho-a84" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="D1p-L4-BQg"/>
+                <constraint firstAttribute="bottom" secondItem="Aq1-ho-a84" secondAttribute="bottom" id="YOu-46-Ev2"/>
+                <constraint firstAttribute="trailing" secondItem="Aq1-ho-a84" secondAttribute="trailing" id="m6v-8G-cS7"/>
+                <constraint firstItem="Aq1-ho-a84" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tDU-tl-mxi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imageView" destination="rDT-dx-xEO" id="Jas-Do-CKW"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
