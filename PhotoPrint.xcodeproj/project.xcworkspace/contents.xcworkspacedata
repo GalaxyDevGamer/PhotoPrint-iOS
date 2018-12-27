@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PrinterApp.xcodeproj">
+      location = "self:/Users/galaxy/Desktop/Github/iOS/PrinterApp/PhotoPrint.xcodeproj">
    </FileRef>
 </Workspace>

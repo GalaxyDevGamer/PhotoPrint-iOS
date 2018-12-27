@@ -29,7 +29,7 @@ class LibraryView: UIViewController {
         collectionView.dataSource = self
         options.isSynchronous = true
         options.isNetworkAccessAllowed = true
-        printInfo.outputType = UIPrintInfo.OutputType.general
+        printInfo.outputType = UIPrintInfo.OutputType.photo
         printInfo.jobName = "Photo Print from iPhone"
         printInfo.orientation = UIPrintInfo.Orientation.portrait
         controller.printInfo = printInfo
@@ -91,7 +91,7 @@ extension LibraryView: UICollectionViewDataSource {
 
 extension LibraryView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        controller.printingItem = getOriginalImage(asset: allPhotos[indexPath.row])
+        controller.printingItem = getOriginalImage(asset: allPhotos[indexPath.row]).resizeForA4()
         controller.present(animated: true) { (controller, success, error) in
             if error != nil {
                 let dialog = UIAlertController(title: "Error", message: "Sending the data failed", preferredStyle: UIAlertController.Style.alert)
