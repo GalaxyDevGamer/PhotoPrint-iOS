@@ -93,11 +93,7 @@ extension LibraryView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         controller.printingItem = getOriginalImage(asset: allPhotos[indexPath.row])
         controller.present(animated: true) { (controller, success, error) in
-            if error == nil {
-                let dialog = UIAlertController(title: "Done", message: "Data sent to the printer", preferredStyle: UIAlertController.Style.alert)
-                dialog.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(dialog, animated: true, completion: nil)
-            } else {
+            if error != nil {
                 let dialog = UIAlertController(title: "Error", message: "Sending the data failed", preferredStyle: UIAlertController.Style.alert)
                 dialog.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(dialog, animated: true, completion: nil)
