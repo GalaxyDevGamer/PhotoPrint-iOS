@@ -1,0 +1,21 @@
+PODS:
+  - PhotoLibrary (1.0.5)
+
+DEPENDENCIES:
+  - PhotoLibrary (from `https://github.com/GalaxyDevGamer/PhotoLibrary.git`)
+
+EXTERNAL SOURCES:
+  PhotoLibrary:
+    :git: https://github.com/GalaxyDevGamer/PhotoLibrary.git
+
+CHECKOUT OPTIONS:
+  PhotoLibrary:
+    :commit: ec9252a112bc42754c8eee512423be5804382e21
+    :git: https://github.com/GalaxyDevGamer/PhotoLibrary.git
+
+SPEC CHECKSUMS:
+  PhotoLibrary: 083ebd1c18be7893cf6ded7b5b717959329651e9
+
+PODFILE CHECKSUM: 0497c1cad45d9f4cc4da935a7ce4a7e660ef44b2
+
+COCOAPODS: 1.6.0

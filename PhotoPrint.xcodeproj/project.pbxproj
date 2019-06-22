@@ -15,6 +15,7 @@
 		6B3FF55821D3BB2800A59D96 /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FF55621D3BB2800A59D96 /* LibraryCell.swift */; };
 		6B3FF55921D3BB2800A59D96 /* LibraryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3FF55721D3BB2800A59D96 /* LibraryCell.xib */; };
 		6B3FF55D21D4F8BD00A59D96 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FF55C21D4F8BD00A59D96 /* ImageExtension.swift */; };
+		A81750B15DAE98E10F46E013 /* Pods_PhotoPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E3D3978AFB816397098287 /* Pods_PhotoPrint.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		6B3FF55621D3BB2800A59D96 /* LibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
 		6B3FF55721D3BB2800A59D96 /* LibraryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCell.xib; sourceTree = "<group>"; };
 		6B3FF55C21D4F8BD00A59D96 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		9F4E3B36D207E0FD6E3E444B /* Pods-PhotoPrint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoPrint.debug.xcconfig"; path = "Target Support Files/Pods-PhotoPrint/Pods-PhotoPrint.debug.xcconfig"; sourceTree = "<group>"; };
+		A8257CC79F1F073F8DD2B168 /* Pods-PhotoPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoPrint.release.xcconfig"; path = "Target Support Files/Pods-PhotoPrint/Pods-PhotoPrint.release.xcconfig"; sourceTree = "<group>"; };
+		E1E3D3978AFB816397098287 /* Pods_PhotoPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A81750B15DAE98E10F46E013 /* Pods_PhotoPrint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				6B3FF54121D3BA1A00A59D96 /* PhotoPrint */,
 				6B3FF54021D3BA1A00A59D96 /* Products */,
+				9292372C8AA6FF2B8B72DD00 /* Pods */,
+				F24D234388EA79B8B815DE9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +104,23 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		9292372C8AA6FF2B8B72DD00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F4E3B36D207E0FD6E3E444B /* Pods-PhotoPrint.debug.xcconfig */,
+				A8257CC79F1F073F8DD2B168 /* Pods-PhotoPrint.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F24D234388EA79B8B815DE9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1E3D3978AFB816397098287 /* Pods_PhotoPrint.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B3FF55121D3BA1C00A59D96 /* Build configuration list for PBXNativeTarget "PhotoPrint" */;
 			buildPhases = (
+				45FD82D4F4DF38BAD6847C22 /* [CP] Check Pods Manifest.lock */,
 				6B3FF53B21D3BA1A00A59D96 /* Sources */,
 				6B3FF53C21D3BA1A00A59D96 /* Frameworks */,
 				6B3FF53D21D3BA1A00A59D96 /* Resources */,
+				2A4CC69D3D5BEDF7A5964576 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,7 @@
 				TargetAttributes = {
 					6B3FF53E21D3BA1A00A59D96 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -163,6 +190,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A4CC69D3D5BEDF7A5964576 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoPrint/Pods-PhotoPrint-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PhotoLibrary/PhotoLibrary.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhotoLibrary.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoPrint/Pods-PhotoPrint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45FD82D4F4DF38BAD6847C22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoPrint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B3FF53B21D3BA1A00A59D96 /* Sources */ = {
@@ -316,37 +390,43 @@
 		};
 		6B3FF55221D3BA1C00A59D96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F4E3B36D207E0FD6E3E444B /* Pods-PhotoPrint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36DQU8A78H;
 				INFOPLIST_FILE = "$(SRCROOT)/PhotoPrint/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = GalaxySoftware.PhotoPrint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		6B3FF55321D3BA1C00A59D96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8257CC79F1F073F8DD2B168 /* Pods-PhotoPrint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36DQU8A78H;
 				INFOPLIST_FILE = "$(SRCROOT)/PhotoPrint/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = GalaxySoftware.PhotoPrint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
