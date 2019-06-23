@@ -36,30 +36,38 @@ class LibraryView: UIViewController {
         if library.isAuthorized() {
             allPhotos = library.getAllPhotos()
         } else {
-            requestPermission()
+            PHPhotoLibrary.requestAuthorization { (status) in
+                switch status {
+                case .authorized:
+                    self.loadPhotos()
+                    break
+                default:
+                    self.pernissonDenied()
+                    break
+                }
+            }
         }
     }
     
-    @IBAction func grantClick(_ sender: Any) {
-        requestPermission()
+    override func viewWillAppear(_ animated: Bool) {
+        if library.isAuthorized() {
+            self.loadPhotos()
+        } else {
+            self.pernissonDenied()
+        }
     }
     
-    func requestPermission() {
-        PHPhotoLibrary.requestAuthorization { (status) in
-            switch status {
-            case .authorized:
-                self.allPhotos = self.library.getAllPhotos()
-                DispatchQueue.main.async {
-                    self.needGrantView.isHidden = true
-                    self.collectionView.reloadData()
-                }
-                break
-            default:
-                DispatchQueue.main.async {
-                    self.needGrantView.isHidden = false
-                }
-                break
-            }
+    func loadPhotos() {
+        allPhotos = library.getAllPhotos()
+        DispatchQueue.main.async {
+            self.needGrantView.isHidden = true
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func pernissonDenied() {
+        DispatchQueue.main.async {
+            self.needGrantView.isHidden = false
         }
     }
 }
