@@ -48,11 +48,16 @@ class LibraryView: UIViewController {
         PHPhotoLibrary.requestAuthorization { (status) in
             switch status {
             case .authorized:
-                self.needGrantView.isHidden = true
                 self.allPhotos = self.library.getAllPhotos()
+                DispatchQueue.main.async {
+                    self.needGrantView.isHidden = true
+                    self.collectionView.reloadData()
+                }
                 break
             default:
-                self.needGrantView.isHidden = false
+                DispatchQueue.main.async {
+                    self.needGrantView.isHidden = false
+                }
                 break
             }
         }
