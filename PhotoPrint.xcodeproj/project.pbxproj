@@ -29,6 +29,7 @@
 		6B3FF55621D3BB2800A59D96 /* LibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
 		6B3FF55721D3BB2800A59D96 /* LibraryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCell.xib; sourceTree = "<group>"; };
 		6B3FF55C21D4F8BD00A59D96 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		6B485A2E25777F790059C4E3 /* PhotoPrint.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoPrint.entitlements; sourceTree = "<group>"; };
 		9F4E3B36D207E0FD6E3E444B /* Pods-PhotoPrint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoPrint.debug.xcconfig"; path = "Target Support Files/Pods-PhotoPrint/Pods-PhotoPrint.debug.xcconfig"; sourceTree = "<group>"; };
 		A8257CC79F1F073F8DD2B168 /* Pods-PhotoPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoPrint.release.xcconfig"; path = "Target Support Files/Pods-PhotoPrint/Pods-PhotoPrint.release.xcconfig"; sourceTree = "<group>"; };
 		E1E3D3978AFB816397098287 /* Pods_PhotoPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +68,7 @@
 		6B3FF54121D3BA1A00A59D96 /* PhotoPrint */ = {
 			isa = PBXGroup;
 			children = (
+				6B485A2E25777F790059C4E3 /* PhotoPrint.entitlements */,
 				6B3FF55B21D4F89600A59D96 /* Extension */,
 				6B3FF55A21D3BB4800A59D96 /* View */,
 				6B3FF55521D3BB0C00A59D96 /* Cell */,
@@ -393,10 +395,12 @@
 			baseConfigurationReference = 9F4E3B36D207E0FD6E3E444B /* Pods-PhotoPrint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhotoPrint/PhotoPrint.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36DQU8A78H;
 				INFOPLIST_FILE = "$(SRCROOT)/PhotoPrint/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,8 +408,9 @@
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = GalaxySoftware.PhotoPrint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -414,10 +419,12 @@
 			baseConfigurationReference = A8257CC79F1F073F8DD2B168 /* Pods-PhotoPrint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhotoPrint/PhotoPrint.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36DQU8A78H;
 				INFOPLIST_FILE = "$(SRCROOT)/PhotoPrint/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,8 +432,9 @@
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = GalaxySoftware.PhotoPrint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
